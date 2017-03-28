@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.5)  22 MAR 2017 17:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.5)  28 MAR 2017 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,211 +621,255 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/bbm.sty
-Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
-LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
-(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
-(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
-) (./sol.aux)
+\c@innercustomthm=\count108
+\c@innercustomobs=\count109
+ (./sol.aux)
 \openout1 = `sol.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count108
+\scratchcounter=\count110
 \scratchdimen=\dimen135
 \scratchbox=\box28
-\nofMPsegments=\count109
-\nofMParguments=\count110
+\nofMPsegments=\count111
+\nofMParguments=\count112
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count111
+\MPscratchCnt=\count113
 \MPscratchDim=\dimen136
-\MPnumerator=\count112
-\makeMPintoPDFobject=\count113
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
 \everyMPtoPDFconversion=\toks29
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
-
- []
-
-<zad40.png, id=1, 707.64375pt x 398.48875pt>
-File: zad40.png Graphic file (type png)
- <use zad40.png>
-Package pdftex.def Info: zad40.png used on input line 33.
-(pdftex.def)             Requested size: 170.71652pt x 96.13176pt.
-LaTeX Font Info:    Try loading font information for OML+plm on input line 34.
-
-(/usr/share/texlive/texmf-dist/tex/latex/polski/omlplm.fd
+LaTeX Font Info:    Try loading font information for OML+plm on input line 41.
+ (/usr/share/texlive/texmf-dist/tex/latex/polski/omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 34.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 41.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 34.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 41.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/polski/omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10.95> on input line 34.
+(Font)              <12> on input line 41.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 34.
+(Font)              <8> on input line 41.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 34.
-LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+(Font)              <6> on input line 41.
+LaTeX Font Info:    Try loading font information for U+msa on input line 41.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+LaTeX Font Info:    Try loading font information for U+msb on input line 41.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+<zad40.png, id=1, 707.64375pt x 398.48875pt>
+File: zad40.png Graphic file (type png)
+ <use zad40.png>
+Package pdftex.def Info: zad40.png used on input line 56.
+(pdftex.def)             Requested size: 170.71652pt x 96.13176pt.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <10.95> on input line 57.
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--59
+Underfull \hbox (badness 10000) in paragraph at lines 70--74
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./zad40.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 60--62
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--62
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
 
  []
 
-<zad42.png, id=17, 1109.14375pt x 399.4925pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+
+ []
+
+<zad42.png, id=14, 1109.14375pt x 399.4925pt>
 File: zad42.png Graphic file (type png)
  <use zad42.png>
-Package pdftex.def Info: zad42.png used on input line 66.
+Package pdftex.def Info: zad42.png used on input line 91.
 (pdftex.def)             Requested size: 512.1496pt x 184.46368pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--72
+Underfull \hbox (badness 10000) in paragraph at lines 94--97
 
  []
 
-<zad42_2.png, id=18, 1109.14375pt x 399.4925pt>
+[2 <./zad42.png>] <zad42_2.png, id=22, 1109.14375pt x 399.4925pt>
 File: zad42_2.png Graphic file (type png)
- <use zad42_2.png>
-Package pdftex.def Info: zad42_2.png used on input line 76.
-(pdftex.def)             Requested size: 512.1496pt x 184.46368pt.
 
-<zad42_3.png, id=19, 1109.14375pt x 399.4925pt>
+<use zad42_2.png>
+Package pdftex.def Info: zad42_2.png used on input line 101.
+(pdftex.def)             Requested size: 512.1496pt x 184.46368pt.
+ <zad42_3.png, id=23, 1109.14375pt x 399.4925pt>
 File: zad42_3.png Graphic file (type png)
- <use zad42_3.png>
-Package pdftex.def Info: zad42_3.png used on input line 87.
+
+<use zad42_3.png>
+Package pdftex.def Info: zad42_3.png used on input line 112.
 (pdftex.def)             Requested size: 512.1496pt x 184.46368pt.
- [2 <./zad42.png> <./zad42_2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
+ [3 <./zad42_2.png> <./zad42_3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
 
  []
 
-<zad42_4.png, id=23, 1109.14375pt x 399.4925pt>
+<zad42_4.png, id=27, 1109.14375pt x 399.4925pt>
 File: zad42_4.png Graphic file (type png)
  <use zad42_4.png>
-Package pdftex.def Info: zad42_4.png used on input line 111.
+Package pdftex.def Info: zad42_4.png used on input line 134.
 (pdftex.def)             Requested size: 512.1496pt x 184.46368pt.
- [3 <./zad42_3.png>] [4 <./zad42_4.png>] (./sol.aux) ) 
+
+Overfull \hbox (0.46745pt too wide) in paragraph at lines 142--144
+\OT4/cmr/m/n/10.95 Podpunkt 2: de-fi-niu-jemy (dla trans-du-cera Me-aly'ego $\O
+MS/plsy/m/n/10.95 h\OT4/cmr/m/n/10.95 ^^F\OML/plm/m/it/10.95 ; \OT4/cmr/m/n/10.
+95 ^^F[]\OML/plm/m/it/10.95 ; Q; q[]; ^^N; ^^[[]\OMS/plsy/m/n/10.95 i$\OT4/cmr/
+m/n/10.95 ) 
+ []
+
+[4 <./zad42_4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 154--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--157
+
+ []
+
+
+Overfull \hbox (4.97299pt too wide) in paragraph at lines 160--165
+\OT4/cmr/m/n/10.95 Wtedy $\OMS/plsy/m/n/10.95 h\OT4/cmr/m/n/10.95 ^^F\OML/plm/m
+/it/10.95 ; Q[]; q[]; F[]; ^^N[]\OMS/plsy/m/n/10.95 i$ \OT4/cmr/m/n/10.95 jest 
+DFA roz-po-zna-j¡-cym $\OML/plm/m/it/10.95 A$ \OT4/cmr/m/n/10.95 (d-d. in-duk-c
+yjny wzgl¦-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--165
+
+ []
+
+
+Overfull \hbox (15.08632pt too wide) in paragraph at lines 190--197
+[]\OT4/cmr/m/n/10.95 Gdyby byªo $\OMS/plsy/m/n/10.95 j\OML/plm/m/it/10.95 Q[]\O
+MS/plsy/m/n/10.95 j \OML/plm/m/it/10.95 < n[]$\OT4/cmr/m/n/10.95 , to $\OML/plm
+/m/it/10.95 Im\OT4/cmr/m/n/10.95 (\OML/plm/m/it/10.95 ^^[[]\OT4/cmr/m/n/10.95 )
+ \U/msb/m/n/10.95 * \OML/plm/m/it/10.95 Im\OT4/cmr/m/n/10.95 (\OML/plm/m/it/10.
+95 ^^[[]\OT4/cmr/m/n/10.95 )$. Niech $\OML/plm/m/it/10.95 s \OMS/plsy/m/n/10.95
+ 2 \OML/plm/m/it/10.95 Im\OT4/cmr/m/n/10.95 (\OML/plm/m/it/10.95 ^^[[]\OT4/cmr/
+m/n/10.95 ) \OMS/plsy/m/n/10.95 n
+ []
+
+
+Overfull \hbox (11.57828pt too wide) in paragraph at lines 190--197
+\OT4/cmr/m/n/10.95 tym, »e $\OML/plm/m/it/10.95 ^^[[]\OT4/cmr/m/n/10.95 (\OML/p
+lm/m/it/10.95 ^^N[]\OT4/cmr/m/n/10.95 (\OML/plm/m/it/10.95 q[]; k\OT4/cmr/m/n/1
+0.95 )) = \OML/plm/m/it/10.95 ^^[[]\OT4/cmr/m/n/10.95 (1\OML/plm/m/it/10.95 ; k
+\OT4/cmr/m/n/10.95 )$ oraz $\OML/plm/m/it/10.95 ^^[[]\OT4/cmr/m/n/10.95 ([](\OM
+L/plm/m/it/10.95 q[]; kl\OT4/cmr/m/n/10.95 )) = \OML/plm/m/it/10.95 ^^[[]\OT4/c
+mr/m/n/10.95 (\OML/plm/m/it/10.95 k; l\OT4/cmr/m/n/10.95 ) =
+ []
+
+[5] [6] (./sol.aux) ) 
 Here is how much of TeX's memory you used:
- 5209 strings out of 494918
- 74403 string characters out of 6180102
- 140403 words of memory out of 5000000
- 8388 multiletter control sequences out of 15000+600000
- 10875 words of font info for 35 fonts, out of 8000000 for 9000
+ 5217 strings out of 494918
+ 74458 string characters out of 6180102
+ 143530 words of memory out of 5000000
+ 8397 multiletter control sequences out of 15000+600000
+ 13975 words of font info for 43 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 42i,12n,39p,351b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf
--dist/fonts/enc/dvips/pl/plrm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvip
-s/pl/plms.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plme.enc}{/usr/
-share/texlive/texmf-dist/fonts/enc/dvips/pl/plmi.enc}</usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/pl/plbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plex
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/pl/plmi8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/pl/plr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy8.pfb>
-Output written on sol.pdf (4 pages, 82897 bytes).
+ 42i,12n,39p,351b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plmi.enc
+}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/usr/share/texlive
+/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/share/texlive/texmf-dist/fonts/en
+c/dvips/pl/plms.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plme.enc}
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/pl/plex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/pl/plmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/pl/plr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/pl/plr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/pl/plr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/pl/plsy8.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/pl/plti10.pfb>
+Output written on sol.pdf (6 pages, 125291 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

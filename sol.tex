@@ -16,14 +16,37 @@
 
 %\usepackage{comment}  
 %\usepackage[left = 2.5cm]{geometry}
-\usepackage{bbm}               % \mathbbm{N} - zbior liczb naturalnych
+%\usepackage{bbm}               % \mathbbm{N} - zbior liczb naturalnych
 %tikz
+
+\date{Wrocław, \today}
+\title{\LARGE{\textbf{Rozwiązania niektórych z około dwustu łatwych zadań z języków formalnych i złożoności obliczeniowej 
+(i jednego nie aż tak trudnego, jak się o nim mówi)}\\\Large{Numeracja zadań jak w zbiorze z 2017 roku}}}
+
+\author{}
+
+\newtheorem{innercustomthm}{Zadanie}
+\newenvironment{zadanie}[1]
+  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
+  {\endinnercustomthm}
+  
+\newtheorem{innercustomobs}{Obserwacja}
+\newenvironment{obserwacja}[1]
+  {\renewcommand\theinnercustomobs{#1}\innercustomobs}
+  {\endinnercustomobs}
+ 
 
 \begin{document}
 
+\maketitle
+
 \section{\LARGE{Języki i automaty}}
 
-\textbf{Zadanie 40} \\ \\
+\subsection{\Large{Synchronizacja automatów częściowych}}
+
+\begin{zadanie}{40}
+\end{zadanie}
+
 Odp: NIE. \\
 
 
@@ -35,7 +58,8 @@ Odp: NIE. \\
 \end{figure}
 
 
-\textbf{Zadanie 41} \\ \\
+\begin{zadanie}{41}
+\end{zadanie}
 W obydwu podpunktach wystarczy zbadać funkcję
 
 \begin{align*}
@@ -54,7 +78,8 @@ $|p_1s_2| < |s|$. \\ \\
 W zwiazku z powyższym $csync(Q) \neq \emptyset \Longleftrightarrow \exists s \in S |s| \leqslant M$. \\
 Dokładne odpowiedzi wynikają z tego wprost, po podstawieniu za $S$ a) dowolniego trzyelementowego zbioru stanów b) Q. \\ \\
 
-\textbf{Zadanie 42} \\ \\
+\begin{zadanie}{42}
+\end{zadanie}
 Wystarczy rozwiązać M, L i XL wynikają w prosty sposób. Wskazówka jest myląca. \\ \\
 
 Zbudujmy automat (częściowy) z trzech cykli, ułożonych jeden nad drugim, każdy długości m. Trzy stany, ułożene jeden nad
@@ -96,11 +121,9 @@ Takie $s$ synchronizuje $S$ i nie istnieje żadne krótsze od niego. Nietrudno w
 
 Co do wersji L i XL, wystarczy zauważyć, że:
 \begin{enumerate}
- \item To samo rozumowanie można zastosować dla dowolnie wielu cyki, otrzymując wielomian dowolnie dużego stopnia.
+ \item To samo rozumowanie można zastosować dla dowolnie wielu cykli, otrzymując wielomian dowolnie dużego stopnia.
  \item Potrzebny nam alfabet, który ma $k+1$ liter (gdzie $k$ jest liczbą cykli). Ale dowolny alfabet można zamienić na
- dwu(trzy)literowy, zapisując jego litery w systemie bi(try)narnym. Każdy stan trzeba zamienić na stałą liczbę stanów, które 
- wczytają odpowiednią liczbę 0 i 1 (i 2), i w ten sposób będą udawały, że wczytają jedną z naszych $k+1$ liter. Wymaga to około
- $~k$ stanów, ale to tylko stała.
+ dwuliterowy, zapisując jego $l$-tą literę w postaci $0^l1$. To działa.
 \end{enumerate}
 
 Dodatkowo, dodając pętle z literką przejścia na przedostatnich stanach każdego cyklu, zamienimy nasz automat na taki, który
@@ -110,6 +133,84 @@ synchronizuje wszystkie stany ( pierwszy stan każdego cyklu ``zjada'' wszystkie
     \includegraphics[width=18cm]{zad42_4.png}%
   }%
 \end{figure}
+
+
+\subsection{\Large{Transducery}}
+
+\begin{zadanie}{77}
+\end{zadanie}
+Podpunkt 1: definiujemy $\sigma_{Mealy} = \sigma_{Moore} \circ \delta$. Reszta zostaje.\\
+Podpunkt 2: definiujemy (dla transducera Mealy'ego $\langle \Sigma, \Sigma_1, Q, q_0, \delta, \sigma_{Mealy} \rangle$)
+\begin{enumerate}
+ \item $Q' = Q \times \Sigma \cup q_0'$. Stan $(q,a)$ = stan do którego doszlibyśmy w starym automacie ze stanu $q$ wczytując
+ literę $a$. Stan $q_0'$ - dodatkowy stan początkowy.
+ \item 
+ \subitem $\delta'((q,a),b) = (\delta(q,a),b)$ dla pary $(q,a) \in Q \times \Sigma$
+ \subitem $\delta'(q_0',a) = (q_0,a)$
+ \item
+ \subitem $\sigma_{Moore}((q,a)) = \sigma_{Mealy}(q,a)$
+ \subitem $\sigma_{Moore}(q_0') = \varepsilon$
+\end{enumerate}
+Otrzymujemy transducer Moore'a $\langle \Sigma, \Sigma_1, Q', q_0', \delta', \sigma_{Moore} \rangle$ równoważny z pierwotnym
+t. Mealy'ego. \\
+Dowód w obu przypadkach zapewne angażuje Zasadę Indukcji Matematycznej względem długości słowa. \\ \\ 
+
+\begin{zadanie}{78}
+\end{zadanie}
+bso. (77) zajmijmy się transducerem Mealy'ego $\langle \Sigma, \Sigma_1, Q, q_0, \delta, \sigma_{Mealy} \rangle$, który 
+świadczy że $A \leqslant_{reg}B$. Niech przy okazji $A_B = \langle \Sigma_1, Q^B, q_0^B, F^B, \delta^B\rangle$ będzie DFA
+rozpoznającym $B$. Definiujemy $\delta'(q,a) = \widehat{\delta^B}(q,\sigma_{Mealy}(q,a))$. Udajemy, że jesteśmy słowem z języka
+$B$ i chodzimy po automacie $A_B$.\\
+Wtedy $\langle \Sigma, Q^B, q_0^B, F^B, \delta' \rangle$ jest DFA rozpoznającym $A$ (d-d. indukcyjny względem długości słowa). \\ \\
+
+\begin{zadanie}{79}
+\end{zadanie}
+Definiujemy transducer Mealy'ego $T_{Mealy}$:
+\begin{enumerate}
+ \item $\Sigma = \{1,2,3,...,n\}$
+ \item $Q = \Sigma$
+ \item $q_0 = 1$
+ \item $\delta(q,a) = a$
+ \item $\Sigma_1 = Q \times \Sigma$
+ \item $\sigma_{Mealy} = Id$
+\end{enumerate}
+
+Niech $T_{Moore} = \langle \Sigma, \Sigma_1, Q', q_0', \delta', \sigma_{Moore} \rangle$ będzie transducerem Moore'a 
+równoważnym z $T_{Mealy}$.
+
+\begin{obserwacja}{1}
+ Możemy założyć, że każdy stan z $Q'$ jest osiągany przez DFA stowarzyszony z $T_{Moore}$. W przeciwnym razie możemy usunąć te 
+ stany, a powstały $T_{Moore}'$ wciąż będzie równoważny z $T_{Mealy}$.
+\end{obserwacja}
+
+\begin{obserwacja}{2}
+ $s \in Im(\sigma_{Mealy}) \Rightarrow |s| = 1$. Zatem $s \in Im(\sigma_{Moore}) \Rightarrow |s| = 1$.
+\end{obserwacja}
+
+Gdyby było $|Q'| < n^2$, to $Im(\sigma_{Mealy}) \nsubseteq Im(\sigma_{Moore})$. Niech 
+$s \in Im(\sigma_{Mealy}) \setminus Im(\sigma_{Moore})$. $s = (k,l)$ dla pewnych $k,l \in \Sigma$. Rozważmy słowo
+$t = kl$. Wtedy $f_{T_{Mealy}}(t) = \sigma_{Mealy}(1,k) \sigma_{Mealy}(k,l) = (1,k)(k,l)$. \\
+Załóżmy nie wprost, że $f_{T_{Moore}}(t) = f_{T_{Mealy}}(t)$. Jest to równoważne (obs. 2) z tym, że 
+$\sigma_{Moore}(\delta'(q_0',k)) = \sigma_{Mealy}(1,k)$ oraz 
+$\sigma_{Moore}(\widehat{\delta'}(q_0',kl)) = \sigma_{Mealy}(k,l) = (k,l)$. 
+Druga równość stoi w jawnej sprzeczności z naszym założeniem, że $(k,l) \notin Im(\sigma_{Moore})$.
+
+\begin{zadanie}{80}
+\end{zadanie}
+Zdaje się, że świadczy o tym następujący transducer Mealy'ego:
+\begin{enumerate}
+ \item $\Sigma = \{(,),[,],\langle,\rangle \}$
+ \item $Q = \{q_0\}$
+ \item $q_0 = q_0$
+ \item $\delta \equiv q_0$
+ \item $\Sigma_1 = \{(,),[,] \}$
+ \item
+ \subitem $\sigma_{Mealy}( q_0, (/) ) = ((/)) $
+ \subitem $\sigma_{Mealy}( q_0, [/] ) = [[/]] $
+ \subitem $\sigma_{Mealy}( q_0, \langle / \rangle ) = [(/)] $
+\end{enumerate}
+Dowód pozostawiamy Czytelnikowi jako ćwiczenie. 
+ 
 
 
 \end{document}
