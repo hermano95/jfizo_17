@@ -19,8 +19,10 @@
 %\usepackage{bbm}               % \mathbbm{N} - zbior liczb naturalnych
 %tikz
 
-\title{\LARGE{\textbf{Rozwiązania około dwustu łatwych zadań z języków formalnych i złożoności obliczeniowej 
-(i jednego nie aż tak trudnego, jak się mówi)}}}
+\date{Wrocław, \today}
+\title{\LARGE{\textbf{Rozwiązania niektórych z około dwustu łatwych zadań z języków formalnych i złożoności obliczeniowej 
+(i jednego nie aż tak trudnego, jak się o nim mówi)}\\\Large{Numeracja zadań jak w zbiorze z 2017 roku}}}
+
 \author{}
 
 \newtheorem{innercustomthm}{Zadanie}
@@ -38,9 +40,56 @@
 
 \maketitle
 
-\section{\LARGE{Języki i automaty}}
+\section{Wskazówki}
 
-\subsection{\Large{Synchronizacja automatów częściowych}}
+Patrząc perspektywicznie w stronę zbliżających się egzaminów, ta sekcja wydaje mi się ważnejsza i zachęcam do spędzania z nią
+czasu podczas samodzielnych wieczornych rozmyślań.
+
+\subsection{Języki i automaty}
+
+\begin{zadanie}{63}
+Warto zastanowić się, jak miałby wyglądać niedeterministyczny automat ze stosem rozpoznający taki język. Pomocny może się też
+okazać pewien lemat.
+\end{zadanie}
+
+\subsubsection{Języki rodzynkowe}
+
+\begin{zadanie}{71}
+Probem sprowadza się do rozpoznawania liter języka $L^*$. \\
+Gdyby miał istanieć taki język L, to pewnie musiałby być nieskończony (dlaczego?). Może istnieje jakaś prosta, nieskończona
+rodzina słów postaci $a^*ba^*$, którą automat ze stosem może łatwo rozpoznawać, ale taki bez stosu będzie miał trudniej?
+Formalnie, jak to bywa, warto używać lematów.
+\end{zadanie}
+
+
+\begin{zadanie}{72}
+Wskazówka z treści zadania wydaje się bardzo dobra. Tu cytat: "Warto rozważyć słowa postaci $a^k(ba^{2n})^l$, dla odpowiednich
+liczb $k$ i $l$."
+\end{zadanie}
+
+\begin{zadanie}{73}
+Raczej chodzi o oszacowanie $i(L_nL_n) \geqslant c2^{i(L_n)}$, przy założeniu że $i(L_n) \geqslant n$, inaczej to nie ma sensu.
+Możnaby najpierw pomyśleć, dlaczego w przypadku NDFA nie można udowodnić takiego oszacowania. A potem zmusić DFA, żeby pamiętał
+dużo tego, co NDFA pamiętać nie musi, bo może zgadnąć. 
+\end{zadanie}
+
+\subsection{Obliczalność}
+
+\begin{zadanie}{92}
+Jak coś ma nie być r.e. to na pewno chodzi o redukcję z $\overline{K}$. Delikatna modyfikacja 89.
+\end{zadanie}
+
+\begin{zadanie}{99}
+i) Jak coś ma nie być r.e. to na pewno chodzi o redukcję z $\overline{K}$. Delikatna modyfikacja 89. \\
+ii) $\Phi$
+\end{zadanie}
+
+
+\section{Szkice rozwiązań}
+
+\subsection{Języki i automaty}
+
+\subsubsection{Synchronizacja automatów częściowych}
 
 \begin{zadanie}{40}
 \end{zadanie}
@@ -119,11 +168,9 @@ Takie $s$ synchronizuje $S$ i nie istnieje żadne krótsze od niego. Nietrudno w
 
 Co do wersji L i XL, wystarczy zauważyć, że:
 \begin{enumerate}
- \item To samo rozumowanie można zastosować dla dowolnie wielu cyki, otrzymując wielomian dowolnie dużego stopnia.
+ \item To samo rozumowanie można zastosować dla dowolnie wielu cykli, otrzymując wielomian dowolnie dużego stopnia.
  \item Potrzebny nam alfabet, który ma $k+1$ liter (gdzie $k$ jest liczbą cykli). Ale dowolny alfabet można zamienić na
- dwu(trzy)literowy, zapisując jego litery w systemie bi(try)narnym. Każdy stan trzeba zamienić na stałą liczbę stanów, które 
- wczytają odpowiednią liczbę 0 i 1 (i 2), i w ten sposób będą udawały, że wczytają jedną z naszych $k+1$ liter. Wymaga to około
- $~k$ stanów, ale to tylko stała.
+ dwuliterowy, zapisując jego $l$-tą literę w postaci $0^l1$. To działa.
 \end{enumerate}
 
 Dodatkowo, dodając pętle z literką przejścia na przedostatnich stanach każdego cyklu, zamienimy nasz automat na taki, który
@@ -135,7 +182,7 @@ synchronizuje wszystkie stany ( pierwszy stan każdego cyklu ``zjada'' wszystkie
 \end{figure}
 
 
-\subsection{\Large{Transducery}}
+\subsubsection{Transducery}
 
 \begin{zadanie}{77}
 \end{zadanie}
@@ -178,9 +225,38 @@ Definiujemy transducer Mealy'ego $T_{Mealy}$:
 Niech $T_{Moore} = \langle \Sigma, \Sigma_1, Q', q_0', \delta', \sigma_{Moore} \rangle$ będzie transducerem Moore'a 
 równoważnym z $T_{Mealy}$.
 
-Gdyby było $|Q'| < n^2$, to $Im(\sigma_{Mealy}) \nsubseteq Im(\sigma_{Moore})$. Niech 
-$s \in Im(\sigma_{Mealy}) \setminus Im(\sigma_{Moore})$. $s = (k,l)$ dla pewnych $k,l \in \Sigma$.
+\begin{obserwacja}{1}
+ Możemy założyć, że każdy stan z $Q'$ jest osiągany przez DFA stowarzyszony z $T_{Moore}$. W przeciwnym razie możemy usunąć te 
+ stany, a powstały $T_{Moore}'$ wciąż będzie równoważny z $T_{Mealy}$.
+\end{obserwacja}
 
+\begin{obserwacja}{2}
+ $s \in Im(\sigma_{Mealy}) \Rightarrow |s| = 1$. Zatem $s \in Im(\sigma_{Moore}) \Rightarrow |s| = 1$.
+\end{obserwacja}
+
+Gdyby było $|Q'| < n^2$, to $Im(\sigma_{Mealy}) \nsubseteq Im(\sigma_{Moore})$. Niech 
+$s \in Im(\sigma_{Mealy}) \setminus Im(\sigma_{Moore})$. $s = (k,l)$ dla pewnych $k,l \in \Sigma$. Rozważmy słowo
+$t = kl$. Wtedy $f_{T_{Mealy}}(t) = \sigma_{Mealy}(1,k) \sigma_{Mealy}(k,l) = (1,k)(k,l)$. \\
+Załóżmy nie wprost, że $f_{T_{Moore}}(t) = f_{T_{Mealy}}(t)$. Jest to równoważne (obs. 2) z tym, że 
+$\sigma_{Moore}(\delta'(q_0',k)) = \sigma_{Mealy}(1,k)$ oraz 
+$\sigma_{Moore}(\widehat{\delta'}(q_0',kl)) = \sigma_{Mealy}(k,l) = (k,l)$. 
+Druga równość stoi w jawnej sprzeczności z naszym założeniem, że $(k,l) \notin Im(\sigma_{Moore})$.
+
+\begin{zadanie}{80}
+\end{zadanie}
+Zdaje się, że świadczy o tym następujący transducer Mealy'ego:
+\begin{enumerate}
+ \item $\Sigma = \{(,),[,],\langle,\rangle \}$
+ \item $Q = \{q_0\}$
+ \item $q_0 = q_0$
+ \item $\delta \equiv q_0$
+ \item $\Sigma_1 = \{(,),[,] \}$
+ \item
+ \subitem $\sigma_{Mealy}( q_0, (/) ) = ((/)) $
+ \subitem $\sigma_{Mealy}( q_0, [/] ) = [[/]] $
+ \subitem $\sigma_{Mealy}( q_0, \langle / \rangle ) = [(/)] $
+\end{enumerate}
+Dowód pozostawiamy Czytelnikowi jako ćwiczenie. 
  
 
 
