@@ -81,9 +81,22 @@ Jak coś ma nie być r.e. to na pewno chodzi o redukcję z $\overline{K}$. Delik
 
 \begin{zadanie}{99}
 i) Jak coś ma nie być r.e. to na pewno chodzi o redukcję z $\overline{K}$. Delikatna modyfikacja 89. \\
-ii) $\Phi$
+ii) Czy $\Phi_m \neq \Phi_n \Longleftrightarrow \exists k \Phi_m(k) \neq \Phi_n(k)$?
 \end{zadanie}
 
+\begin{zadanie}{101}
+Trzeba wprost zdefiniować redukcję z B do A. 
+\end{zadanie}
+
+\begin{zadanie}{102}
+a. założenie o nietrywialności zadania b. implikuje odpowiedź w zadaniu a.. Pewna użyteczna redukcja i w tym zadaniu okaże się
+pomocna. \\
+b. 
+\end{zadanie}
+
+\begin{zadanie}{103}
+Należałoby się zastanowić, co wspólnego mają te warunki z monotonicznością f.
+\end{zadanie}
 
 \section{Szkice rozwiązań}
 
