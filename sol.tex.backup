@@ -91,7 +91,7 @@ Trzeba wprost zdefiniować redukcję z B do A.
 \begin{zadanie}{102}
 a. założenie o nietrywialności zadania b. implikuje odpowiedź w zadaniu a.. Pewna użyteczna redukcja i w tym zadaniu okaże się
 pomocna. \\
-b. 
+b. formalne sformułowanie tego, co to znaczy że $n \in B$, używająca 3 zmiennych, wprost prowadzi do co-r.e. zbioru A.
 \end{zadanie}
 
 \begin{zadanie}{103}
@@ -195,6 +195,23 @@ synchronizuje wszystkie stany ( pierwszy stan każdego cyklu ``zjada'' wszystkie
 \end{figure}
 
 
+\begin{zadanie}{63}
+\end{zadanie}
+Przypuśćmy nie wprost, że ten język jest bezkontekstowy. Niech $N$ będzie stałą z lematu o pompowaniu dla tego języka. 
+Wystarczy rozważyć słowo $0^{2N}1^{2N}0^{2N}1^{2N}$ i pamiętać, że przy podziale z lematu (ozn. $vwxyz$) zachodzi
+$|wxy| \leqslant N$. Odpowiednio cierpliwe rozpatrywanie przypadków (gdzie w oryginalnym słowie ląduje podsłowo $wxy$)
+prowadzi nas do wniosku, że zawsze można odpowiedni fragment podpompować (lub spompować) i uzyskać słowo spoza języka.
+
+
+\subsubsection{Języki rodzynkowe}
+
+\begin{zadanie}{71}
+\end{zadanie}
+Rozważmy $L = \{ a^nba^n : n \in \mathbb{N}\}$. Łatwo sprawdzić, że nawet deterministyczny automat ze stosem daje sobie radę
+z językiem $L*$, bo rozpoznawanie liter tego języka (czyli słów języka $L$) jest bardzo łatwe. \\
+Z lematu o pompowaniu bardzo łatwo pokazać, że $L*$ nie jest regularny ($L$ też nie jest).
+
+
 \subsubsection{Transducery}
 
 \begin{zadanie}{77}
@@ -270,7 +287,60 @@ Zdaje się, że świadczy o tym następujący transducer Mealy'ego:
  \subitem $\sigma_{Mealy}( q_0, \langle / \rangle ) = [(/)] $
 \end{enumerate}
 Dowód pozostawiamy Czytelnikowi jako ćwiczenie. 
- 
 
+\subsection{Obliczalność}
+
+\begin{zadanie}{89}
+\end{zadanie}
+Niech $B = \{ n : Dom(\Phi_n) = \mathbb{N} \}$. Robimy redukcję $f_{89}$ z $\overline{K}$. \\
+Definiujemy $f_{89}(n)$ jako numer następującego programu: \\
+\texttt{wczytaj k  \\ odpal $\Phi_n(n)$ na $k$ kroków \\ jeżeli się skończył : zapętl się \\ w p.p. : zwróć 1 \\}
+Sprawdzenie, że zachodzi $n \in \overline{K} \Longleftrightarrow f_{89}(n) \in B$ pozostawiamy jako proste ćwiczenie.
+
+
+
+\begin{zadanie}{92}
+\end{zadanie}
+Robimy redukcję $f_{92}$ z $\overline{K}$. \\
+Definiujemy $f_{92}(n)$ jako numer następującego programu: \\
+\texttt{wczytaj k \\ jeżeli k jest parzyste : zapętl się  \\ w p.p. : \\ odpal $\Phi_n(n)$ na $k$ kroków \\ jeżeli się skończył : zapętl się \\ w p.p. : zwróć 1 \\}
+Oczywiście $Dom(\Phi_{f_{92}(n)}) = (2\mathbb{N}+\{1\}) \cap \{ t \in \mathbb{N} : t < \text{czas wykonania się } \Phi_n(n) \}$. \\
+Sprawdzenie, że zachodzi $n \in \overline{K} \Longleftrightarrow f_{92}(n) \in B$ pozostawiamy jako proste ćwiczenie.
+
+\begin{zadanie}{99}
+\end{zadanie}
+i) Robimy redukcję f z $\overline{K}$, pamiętając o redukcji $f_{89}$. \\
+Niech $c$ będzie numerem następującego programu: \\
+\texttt{wczytaj k  \\ zwróć 1 \\}
+Definiujemy $f(n) = \langle c , f_{89}(n) \rangle$. Jest oczywiste (po zrobieniu zadania $89$), że zachodzi \\
+$$
+n \in \overline{K} \Longleftrightarrow f(n) \in T.
+$$
+ii) Nie. Robimy redukcję f z $\overline{K}$, pamiętając o redukcji $f_{92}$. \\
+Niech $\overline{f_{92}}$ będzie numerem następującego programu: \\
+\texttt{wczytaj k \\ jeżeli k jest nieparzyste : zwróć 1  \\ w p.p. : \\ odpal $\Phi_n(n)$ na $k$ kroków \\ jeżeli się skończył : zwróć 1 \\ w p.p. : zapętl się \\}
+Definiujemy $f(n) = \langle \overline{f_{89}}(n) , f_{89}(n) \rangle$. Jest oczywiste (po zrobieniu zadania $92$), że zachodzi \\
+$$
+n \in \overline{K} \Longleftrightarrow f(n) \in \overline{T}.
+$$
+
+\begin{zadanie}{101}
+\end{zadanie}
+Definiujemy $f^{-1}$ w następujący sposób: \\
+\texttt{wczytaj n \\ Dla $k=1,2,3...$ : \\ jeżeli $f(k) = n$ : zwróć k \\ }
+Oczywiście $f^{-1}$ jest całkowita, bo $f$ jest ``na". \\
+Pokażemy, że $f^{-1}$ jest redukcją z $B$ do $A$ :
+\begin{align}
+ n \in B \Longleftrightarrow Id(n) \in B \Longleftrightarrow f(f^{-1}(n)) \in B \Longleftrightarrow
+ 
+\end{align}
+
+
+
+\begin{zadanie}{102}
+\end{zadanie}
+a) Nie. Wysztarczy pokazać redukcję z $K$ (dlaczego?). O dziwo, jest to dokładnie $f_{89}$. \\
+b) Definiujemy $A = \{ (n,k,t) : \Phi_n(i) \text{ kończy się po co najwyżej $t$ krokach dla } \\ 
+i=1,2,...,k \text{ oraz nie kończy się dla $i > k$} \}$. Ten zbiór jest dobry, a sprawdzenie pozostawiamy jako ćwiczenie.
 
 \end{document}
