@@ -86,6 +86,41 @@ b. formalne sformułowanie tego, co to znaczy że $n \in B$, używająca 3 zmien
 Należałoby się zastanowić, co wspólnego mają te warunki z monotonicznością f.
 \end{zadanie}
 
+\begin{zadanie}{110}
+To jest wgl. ważne zadanie i warto mu poświęcić dłuższą chwilę. \\
+a) Chcemy zakodować Maszynę Turinga (z ustalonym wejściem) jako automat deterministyczny z dwoma stosami. \\
+$a_0$) Zamienić MT z ustalonym wejściem na równoważną MT z pustym wejściem. \\
+$a_1$) Trzeba się przyjrzeć dokładniej temu,
+jak Maszyna wygląda, porysować coś. W szczególności spostrzec, że działa ona bardzo lokalnie. Trochę podobne do zadania 
+130, może być ono pewną inspiracją. \\
+b) Zamienić stos na licznik. \\
+$b_0$) Jak zamienić potencjalnie szeroki wybór sweterków (jak u blondynki) na sweterki tylko dwóch kolorów (jak u blondyna)? \\
+$b_1$) Popatrzeć na taki zamieniony stos i zobaczyć, że w rzeczywistości wystarczy nam pamiętać jedną liczbę zamiast jednego 
+stosu. \\
+$b_2$) Poświęcić chwilę (!) na względnie dopracowanie wymaganych od stosów operacji w licznikowej implementacji stosów. 
+Przydatne mogą okazać się dwa dodatkowe liczniki. \\
+c) Zachwycić się bogactwem liczb naturalnych - w szczególności można skorzystać ze znanego wszem i wobec kodowania
+skończonych ciągów liczbowych jako pojedyncze liczby. Np. ciągi 4-elementowe też się da. Zaimplementować wymagane
+operacje przy użyciu drugiego licznika.
+\end{zadanie}
+
+\begin{zadanie}{114}
+Mocno podobne do zadania 127 (gramatyk ze znikaniem). Tym razem trzeba zrobić dwie gramatyki, osobną dla słów $l_i$ i $r_i$.
+\end{zadanie}
+
+\begin{zadanie}{115}
+Warto skorzystać z zadania 114. Udowodnić, że $(L_G)^c$ dla CFG $G$ z zad. 114 jest CFL. Porachować, przypomnieć sobie prawa
+de Morgana.
+\end{zadanie}
+
+\begin{zadanie}{116}
+Warto skorzystać z zadania 115.
+\end{zadanie}
+
+\begin{zadanie}{118}
+To mi wygląda na redukcję z PCP ( $\langle a , b \rangle = \langle l_i , r_i \rangle$ ), ale jeszcze nie wiem.
+\end{zadanie}
+
 \section{Szkice rozwiązań}
 
 \subsection{Języki i automaty}
