@@ -11,6 +11,8 @@
 \usepackage{epstopdf}
 \usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
                                % Do³¹czamy zestaw ró¿nych przydatnych znaczków ...
+\usepackage{tikz}
+\usetikzlibrary{chains,fit,shapes}
 
 \usepackage{url}
 
@@ -40,9 +42,12 @@
 
 \maketitle
 
+\section{Robocze}
+
+
 \section{Wskazówki}
 
-Patrząc perspektywicznie w stronę zbliżających się egzaminów, ta sekcja wydaje mi się ważnejsza i zachęcam do spędzania z nią
+Patrząc perspektywicznie w stronę zbliżających się egzaminów, ta sekcja wydaje mi się ważniejsza i zachęcam do spędzania z nią
 czasu podczas samodzielnych wieczornych rozmyślań.
 
 \subsection{Języki i automaty}
@@ -59,6 +64,23 @@ Probem sprowadza się do rozpoznawania liter języka $L^*$. \\
 Gdyby miał istanieć taki język L, to pewnie musiałby być nieskończony (dlaczego?). Może istnieje jakaś prosta, nieskończona
 rodzina słów postaci $a^*ba^*$, którą automat ze stosem może łatwo rozpoznawać, ale taki bez stosu będzie miał trudniej?
 Formalnie, jak to bywa, warto używać lematów.
+\end{zadanie}
+
+\subsubsection{Konfluentność}
+
+\begin{zadanie}{74}
+1) To pytanie jest (nieprzypadkowo) podobne (ale nie identyczne) do pytania: Czy każdy automat deterministyczny można 
+zsynchronizować? (zadania 37-39). \\
+2) Warto zauważyć, że w definicji konfluantności jest równoważność. Może zatem być tak, że obie jej strony będą zawsze fałszywe,
+co oznacza, że chcemy ``na dobre'' zepsuć słowo. Może są języki nieregularne, które łatwo zepsuć?
+\end{zadanie}
+
+\begin{zadanie}{75}
+To zadanie jest podobne do zadania 38.
+\end{zadanie}
+
+\begin{zadanie}{76}
+Może chodzić o język, który nie jest tak łatwo zepsuć (ma długie słowa psujące).
 \end{zadanie}
 
 \subsection{Obliczalność}
@@ -88,6 +110,11 @@ b. formalne sformułowanie tego, co to znaczy że $n \in B$, używająca 3 zmien
 
 \begin{zadanie}{103}
 Należałoby się zastanowić, co wspólnego mają te warunki z monotonicznością f.
+\end{zadanie}
+
+\begin{zadanie}{104}
+Wskazówka do implikacji $2 \Rightarrow 1$ podana w treści jest bardzo dobra. Wskazówka do implikacji odwrotnej: to jest podobne
+do zadania 97. Trzeba powtórzyć tamto rozumowania, z tym że zamiast 2 zbiorów wziąć przeliczalnie wiele.
 \end{zadanie}
 
 \begin{zadanie}{110}
@@ -168,7 +195,7 @@ Dokładne odpowiedzi wynikają z tego wprost, po podstawieniu za $S$ a) dowolnie
 
 \begin{zadanie}{42}
 \end{zadanie}
-Wystarczy rozwiązać M, L i XL wynikają w prosty sposób. Wskazówka jest myląca. \\ \\
+Podpunkt M można rozwiązać w naturalny sposób. W kolejnych podpunktach warto jednak skorzystać ze wskazówki. \\ \\
 
 Zbudujmy automat (częściowy) z trzech cykli, ułożonych jeden nad drugim, każdy długości m. Trzy stany, ułożene jeden nad
 drugim, będą stanowiły nasz początkowy zbiór S \\ \\
@@ -225,6 +252,24 @@ Rozważmy $L = \{ a^nba^n : n \in \mathbb{N}\}$. Łatwo sprawdzić, że nawet de
 z językiem $L^*$, bo rozpoznawanie liter tego języka (czyli słów języka $L$) jest bardzo łatwe. \\
 Z lematu o pompowaniu bardzo łatwo pokazać, że $L^*$ nie jest regularny ($L$ też nie jest).
 
+
+\subsubsection{Konfluentność}
+
+\begin{zadanie}{74}
+\end{zadanie}
+1) $\{ 0^n : k|n \}$ dla $k>1$ jest przykładem na regularny język niekonfluentny. \\
+2) $\{ 0^n1^n : n \in \mathbb{N} \}$ jest przykładem na nieregularny język konfluentny. Uniwersalnym słowem $x$ dla tego języka
+jest $10$.
+
+\begin{zadanie}{75}
+\end{zadanie}
+Rozwiązanie tego zadania jest identyczne do rozwiązania zadania 38.
+
+\begin{zadanie}{76}
+\end{zadanie}
+Język dobrych nawiasowań jest dobrym przykładem. Dowód przebiega nie wprost, a jeśli oznaczymy przez $c$ stałą wynikającą
+z założenia nie wprost, to słowa $s_1 = \ )^{c+1}$ i $s_2 = \ (^{c+1}$ są kontrprzykładami, gdyż trzeba zepsuć $s_1$ aby je
+ukonfluentnić, a nie można tego zrobić słowem długości mniejszej niż $c+2$.
 
 \subsubsection{Transducery}
 
@@ -340,6 +385,27 @@ $$
 n \in \overline{\mathbb{K}} \Longleftrightarrow f(n) \in \overline{T}.
 $$
 
+
+\begin{zadanie}{100}
+\end{zadanie}
+Oczywiście $\Pi_0 = \Sigma_0$. Z zadań 81-82 wynika, że $\Sigma_1 = $ zbiory rekurencyjnie przeliczalne. Pokażemy, że
+$ L \notin \Sigma_1$. Świadczy o tym następująca redukcja $f$ z $\overline{\mathbb{K}}$: definiujemy $f(n)$ jako numer
+programu: \\
+\texttt{wczytaj k \\ jeżeli k < n : zwróc 1 \\ w p.p. odpal $\Phi_n(n)$ \\ zwróc 1 \\}
+Widzimy, że gdy $n \in \overline{\mathbb{K}}$ to  $Dom(\Phi_{f(n)}) = \{1,2,...,n\}$, w przeciwnym razie 
+$Dom(\Phi_{f(n)}) = \mathbb{N}$. \\
+Następnie pokażemy, że $L \in \Sigma_2$. W tym celu zdefiniujmy zbiory
+\begin{align}
+ B_0 = \{ \ (n,m) : &\left( \exists l<\pi_1(f^{-1}(m)) \ \Phi_n(l) \text{ zakończy się po $ \pi_2(f^{-1}(m)) $ krokach} \right) \wedge \notag \\ 
+ &\left( \forall l \geqslant \pi_1(f^{-1}(m)) \ \Phi_n(l) \text{ nie kończy się} \right) \ \} \notag \\
+ B = f(B_0) \notag
+\end{align}
+gdzie $f$ jest naszą ustaloną, obliczalną bijekcją $\mathbb{N}^2 \longrightarrow \mathbb{N}$, natomiast $\pi_i$ jest rzutem
+na $i$-tą współrzędną. \\
+Oczywiście $L$ jest rzutem zbioru $B_0$, zatem żeby uzasadnić, że $L \in \Sigma_2$, wystarczy pokazać, 
+że jest on $B \in \Pi_1$. Dowód tego faktu pozostawiamy jako ćwiczenie.
+
+
 \begin{zadanie}{101}
 \end{zadanie}
 Definiujemy $f^{-1}$ w następujący sposób: \\
@@ -374,6 +440,20 @@ b) Nie. Niech $A = \{1\}$. Niech $g$ będzie całkowitą funkcją rekurencyją, 
 \texttt{wczytaj n \\ jeżeli n jest parzyste : zwróć $g(\frac{n}{2})$ \\ w p.p. : zwróć 1 \\}
 $f$ spełnia warunek z zadania, ale $f(\mathbb{N}) = \mathbb{K} \cup \{ 1 \}$, a to nie jest zbiór rekurencyjny.
 
+\begin{zadanie}{104}
+\end{zadanie}
+$1 \Rightarrow 2$: \\
+Niech $\mathbb{D} = \{ A_i : i \in \mathbb{N} \}$. Niech $\phi: \mathbb{N}^2 \longrightarrow \mathbb{N}$ będzie dowolną ustaloną
+obliczalną bijekcją. Definiujemy zbiór $B$ następująco: \\
+\begin{align}
+ \varphi(i,n) \in B \Longleftrightarrow n \in A_i \notag
+\end{align}
+Ten zbiór jest dobry, a o tym, że $A_i \leqslant_{rek} B$, świadczy redukcja $\varphi(i,\cdot)$. \\
+$2 \Rightarrow 1$: \\
+Odpowiedź na pytanie ze wskazówki: 1. Jest to zbiór $f^{-1}(B)$. Z tego wynika, przy uwzględnieniu faktu, że redukcji 
+(jako programów), jest tylko przeliczalnie wiele, że dla ustalonego zbioru $B$ istanieje tylko przeliczalnie wiele zbiorów
+$A_i$ takich, że $A_i \leqslant_{rek} B$. Zatem, z tego, że $\mathbb{D} \subseteq \{ A_i : i \in \mathbb{N} \}$ wynika, że
+zbiór $\mathbb{D}$ musi być przeliczalny.
 
 \begin{zadanie}{105}
 \end{zadanie}
@@ -386,5 +466,129 @@ Jako $f(n)$ przyjmijmy numer następującego programu: \\
 Dowód poprawności pozostawiamy jako ćwiczenie. \\
 
 b) Nie, bo $Tot$ nie jest r.e. (zadanie $89$), a $N_{emp}$ jest.\\
+
+
+\begin{zadanie}{110}
+\end{zadanie}
+Bso. przyjmujemy, że mamy Maszynę Turinga z pustą taśmą wejściową i alfabetem złożonym z 0 i 1 oraz symbolu pustej taśmy - B. \\
+a) Bedziemy utrzymawać jako stan automatu ze stosami dwie części aktualnie używanego skrawka taśmy MT: na lewo i na prawo od
+głowicy (lewy i prawy stos). W stanie będziemy pamiętali aktualny stan MT oraz komórkę na której jest głowica 
+($Q' = Q \times \Sigma$). \\
+
+\begin{tikzpicture}
+\tikzstyle{every path}=[very thick]
+
+\edef\sizetape{0.7cm}
+\tikzstyle{tmtape}=[draw,minimum size=\sizetape]
+\tikzstyle{tmhead}=[arrow box,draw,minimum size=.5cm,arrow box
+arrows={east:.25cm, west:0.25cm}]
+
+%% Draw TM tape
+\begin{scope}[start chain=1 going right,node distance=-0.15mm]
+
+    \node [on chain=1,tmtape] (begin) {$\#$};
+    \node [on chain=1,tmtape] {0};
+    \node [on chain=1,tmtape] {1};
+    \node [on chain=1,tmtape] (input) {1};
+    \node [on chain=1,tmtape] {1};
+    \node [on chain=1,tmtape] {0};
+    \node [on chain=1,tmtape] {0};
+    \node [on chain=1,tmtape] {B};
+    \node [on chain=1,tmtape] {B};
+    \node [on chain=1,tmtape] {B};
+    \node [on chain=1,tmtape,draw=none] {$\ldots$};
+\end{scope}
+
+%% Draw TM head below (input) tape cell
+\node [tmhead,yshift=-.3cm] at (input.south) (head) {$q_i$};
+\end{tikzpicture}
+
+zamieniamy na \\
+
+\begin{tikzpicture}
+ \tikzstyle{every path}=[very thick]
+
+\edef\sizetape{0.7cm}
+\tikzstyle{tmtape}=[draw,minimum size=\sizetape]
+\tikzstyle{tmhead}=[arrow box,draw,minimum size=.5cm,arrow box
+arrows={east:.25cm, west:0.25cm}]
+
+%% Draw TM tape
+\begin{scope}[start chain=1 going below, start chain=2 going below ,node distance=-0.15mm, every node/.style=draw]
+    \node [on chain=1,tmtape,draw=none] {};
+    \node [on chain=1,tmtape] {1};
+    \node [on chain=1,tmtape] {0};
+    \node [on chain=1,tmtape] (begin) {$\#$};
+    
+    \node [tmhead,right=1.15cm] at (begin.west) (head) {$(q_i,1)$};
+    
+    \node [on chain=2,right=3cm,tmtape] {1};
+    \node [on chain=2,tmtape] {0};
+    \node [on chain=2,tmtape] {0};
+    \node [on chain=2,tmtape] (begin) {$\#$};
+\end{scope}
+
+
+\end{tikzpicture}
+\\\
+Operacje MT implementuje się w prosty sposób. \\
+b) zamienimy stos na licznik: patrzeć na stos jako na liczbę w systemie binarnym (najbardziej
+znaczące cyfry na dole stosu). Dodatkowo, aby uniknąć kłopotu z zerami wiodącymi, traktujemy symbol dna stosu $\#$ jako 1.\\
+Operacje stosowe (zdejmowanie i dodawanie symboli) implementujemy jako odpowiednio 
+dzielenie całkowite oraz mnożenie przez 2 + ewentualne dodanie 1 . Do tego wykorzystujemy pozostałe dwa liczniki. \\
+c) konfiguracja 4 liczników jest ciągiem 4 liczb naturalnych $(a,b,c,d)$. W związku z tym w prosty sposób można ją zakodować
+jako jedną liczbę równą $2^a3^b5^c7^d$. Drugi licznik jest potrzebny do implementacji wymaganych operacji na 4 licznikach:
+dodawania i odejmowania ze starego licznika $\longrightarrow$ mnożenia i dzielenia nowego licznika przez odpowiednią liczbę. 
+Ponadto łatwo sprawdzać, czy któryś ze starych liczników jest pusty - wystarczy sprawdzić podzielność przez odpowiednią liczbę. \\ 
+
+
+\begin{zadanie}{114}
+\end{zadanie}
+Redukcja z PCP do problemu niepustego przekroju gramatyk: \\
+Dostajemy instancję PCP: $P = \{ \langle l_i, r_i \rangle : i \in \{ 1,2,...,n \} \}$. Budujemy następujące gramatyki $G$ i $H$: \\
+\begin{enumerate}
+ \item $N = \Sigma \cup \{1,2,...,n\}$
+ \item $T = \{ S \}$
+ \item $\Pi_G = \{ S \longrightarrow l_i S i \ | \ \varepsilon \}$
+ \item $\Pi_H = \{ S \longrightarrow r_i S i \ | \ \varepsilon \}$
+\end{enumerate}
+Oczywiście $L_G \cap L_H \neq \emptyset \, (\{ \varepsilon \}) \Longleftrightarrow $ zadana instancja PCP ma rozwiązanie.
+
+\begin{zadanie}{115}
+\end{zadanie}
+Skoro języki $L_G$ i $L_H$ z zadania 114 są rozpoznawane w naturalny sposób przez deterministyczne automaty ze stosem,
+to ich dopełnienia są rozpoznawane przez dopełnicze automaty $\Rightarrow$ języki $L_G^c$ i $L_H^c$ są bezkontekstowe. 
+Z praw de Morgana rachunku zbiorów wynika, że
+\begin{align}
+ L_G \cap L_H = (L_G^c \cup L_H^c)^c \notag
+\end{align}
+czyli $L_G \cap L_H = \emptyset  \Longleftrightarrow (L_G^c \cup L_H^c) = A^* \Longleftrightarrow $ zadana instancja PCP 
+nie ma rozwiązania. \\
+Teraz wystarczy pokazać, jak program ma wygenerować gramatykę dla $L_G^c \cup L_H^c$, co będzie redukcją z dopełnienia PCP,
+które jest oczywiście nierozstrzygalne. Być może najłatwiej zbudować deterministyczny automat ze stosem, rozpoznający $L_G$,
+i powiedzieć, że ponieważ jest deterministyczny, to można wywrócić stany akceptujące na lewą stronę i dostaniemy automat rozpoznający
+dopełnienie. A z niego można wyprodukować gramatykę (ponoć wykład).
+
+\begin{zadanie}{116}
+\end{zadanie}
+Nie. Redukcja z zadania 115: \\
+Weż gramatykę $G$ z problemu $L_G =? A^*$. Wyprodukuj gramatykę $G_{all}$, taką że $L_{G_{all}} = A^*$. Zwróć parę gramatyk
+$G$ i $G_{all}$. \\
+Oczywiście zachodzi $L_G = A^* \Longleftrightarrow L_G = L_{G_{all}}$, co kończy dowód poprawności.
+
+\begin{zadanie}{118}
+\end{zadanie}
+Redukcja z semiThuego: \\
+Dostajemy zbiór produkcji P oraz słowa v i w. Idea: zapętlić słowo (skleić początek z końcem), dodając przy tym specjalny
+znak początku słowa ($\#$). Formalnie:
+\begin{enumerate}
+ \item $\Sigma' = \Sigma \cup \{ \# \}$
+ \item $v' = \# v$
+ \item $w' = \# w$
+ \item $P' = P \cup \{ \langle a , a \rangle : a \in \Sigma' \}$
+\end{enumerate}
+Implikacja w prawo jest, jak zwykle, dość oczywista. Do implikacji w lewo trzeba uzasadnić przekonywująco, że jeżeli 
+$v' \longrightarrow_{P'}^* w'$, to można naśladować potrzebne produkcje i z $v$ otrzymać $w$ w zwykłym semiThu. 
+
 
 \end{document}
