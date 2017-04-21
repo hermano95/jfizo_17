@@ -44,6 +44,41 @@
 
 \section{Robocze}
 
+\begin{zadanie}{107}
+Wskazówka sugeruje, że nie. Dodatkowa byłaby taka, że zbiorów r.e. jest przeliczalnie wiele - bo tyle jest programów, które je
+rozpoznają. Warto też przypomnieć sobie (jak ktoś nie pamięta), dowód tego, że podzbiorów $\mathbb{N}$ jest nieprzeliczalnie
+wiele. Ten argument jest tylko trochę "inteligentniejszy".
+\end{zadanie}
+Niech zbiory $A_i$ będą wszystkimi nieskończonymi zbiorami r.e. \\
+Definiujemy indukcyjnie zbiory $B$ i $C$ w następujący sposób: \\
+\begin{enumerate}
+ \item $B_0 = C_0 = \emptyset$
+ \item Niech $b_i,c_i \in A_i \setminus C_{i-1},\ b_i \neq c_i$. Dla każdego $j$ zbiór $C_j$ jest skończony, więc zawsze znajdziemy
+ takie elementy
+ \item $B_i = B_{i-1} \cup \{ b_i \}$
+ \item $C_i = C_{i-1} \cup \{ b_i, c_i \}$
+ \item $B = \bigcup_i B_i$
+ \item $C = \bigcup_i C_i$
+\end{enumerate}
+Oczywiście zbiór $B$ jest nieskończony, bo na każdym kroku dodajemy do niego jeden element. Z drugiej strony, dla każdego $A_i$
+istnieje jego element $c_i$, taki że $c_i \notin B$. W związku z tym, dla każdego $i$ zachodzi $A \nsubseteq B$. 
+Zatem B jest nieskończonym zbiorem bez nieskończonego podzbioru r.e.
+
+
+\begin{zadanie}{120}
+ Warto rozważyć jakiś nierozstrzygalny problem, który można zakodować w kafelkach o skończonej liczbie kolorów, a poprawność
+ kodowania sprawdzać bardzo lokalnie (to będzie odpowiadało poprawnym czwórkom kolorów). Trochę podobne do rozwiązania 
+ z Sipsera zadania 115.
+\end{zadanie}
+
+\begin{zadanie}{121}
+ a) 
+ b) tutaj warto skorzystać z wskazówki z treści zadania o zapisie liczby naturalnej jako 4 kwadratów liczb całkowitych.
+\end{zadanie}
+
+\begin{zadanie}{122}
+ Podobne do zadania 129.
+\end{zadanie}
 
 \section{Wskazówki}
 
@@ -431,7 +466,7 @@ i=1,2,...,k \text{ oraz nie kończy się dla $i > k$} \}$. Ten zbiór jest dobry
 
 \begin{zadanie}{103}
 \end{zadanie}
-a) Tak. Bo istanieje takie duże $N$, że na zbiorze $\{ N, N+1, ... \}$ $f$ jest niemalejąca. Z zadania $86$ wynika więc, 
+a) Tak. Bo istnieje takie duże $N$, że na zbiorze $\{ N, N+1, ... \}$ $f$ jest niemalejąca. Z zadania $86$ wynika więc, 
 że $f(\{ N, N+1, ... \})$ jest rekurencyjny. Zatem $f(\mathbb{N}) = f(\{ 1,2, ... ,N-1 \}) \cup f(\{ N, N+1, ... \})$ jest
 rekurencyjny, jako suma dwóch zbiorów rekurencyjnych. \\
 
@@ -451,7 +486,7 @@ obliczalną bijekcją. Definiujemy zbiór $B$ następująco: \\
 Ten zbiór jest dobry, a o tym, że $A_i \leqslant_{rek} B$, świadczy redukcja $\varphi(i,\cdot)$. \\
 $2 \Rightarrow 1$: \\
 Odpowiedź na pytanie ze wskazówki: 1. Jest to zbiór $f^{-1}(B)$. Z tego wynika, przy uwzględnieniu faktu, że redukcji 
-(jako programów), jest tylko przeliczalnie wiele, że dla ustalonego zbioru $B$ istanieje tylko przeliczalnie wiele zbiorów
+(jako programów), jest tylko przeliczalnie wiele, że dla ustalonego zbioru $B$ istnieje tylko przeliczalnie wiele zbiorów
 $A_i$ takich, że $A_i \leqslant_{rek} B$. Zatem, z tego, że $\mathbb{D} \subseteq \{ A_i : i \in \mathbb{N} \}$ wynika, że
 zbiór $\mathbb{D}$ musi być przeliczalny.
 
@@ -470,6 +505,7 @@ b) Nie, bo $Tot$ nie jest r.e. (zadanie $89$), a $N_{emp}$ jest.\\
 
 \begin{zadanie}{110}
 \end{zadanie}
+Bso. przyjmujemy, że mamy Maszynę Turinga z pustą taśmą wejściową i alfabetem złożonym z 0 i 1 oraz symbolu pustej taśmy - B. \\
 a) Bedziemy utrzymawać jako stan automatu ze stosami dwie części aktualnie używanego skrawka taśmy MT: na lewo i na prawo od
 głowicy (lewy i prawy stos). W stanie będziemy pamiętali aktualny stan MT oraz komórkę na której jest głowica 
 ($Q' = Q \times \Sigma$). \\
@@ -486,12 +522,12 @@ arrows={east:.25cm, west:0.25cm}]
 \begin{scope}[start chain=1 going right,node distance=-0.15mm]
 
     \node [on chain=1,tmtape] (begin) {$\#$};
-    \node [on chain=1,tmtape] {b};
-    \node [on chain=1,tmtape] {b};
-    \node [on chain=1,tmtape] (input) {c};
-    \node [on chain=1,tmtape] {a};
-    \node [on chain=1,tmtape] {a};
-    \node [on chain=1,tmtape] {a};
+    \node [on chain=1,tmtape] {0};
+    \node [on chain=1,tmtape] {1};
+    \node [on chain=1,tmtape] (input) {1};
+    \node [on chain=1,tmtape] {1};
+    \node [on chain=1,tmtape] {0};
+    \node [on chain=1,tmtape] {0};
     \node [on chain=1,tmtape] {B};
     \node [on chain=1,tmtape] {B};
     \node [on chain=1,tmtape] {B};
@@ -515,15 +551,15 @@ arrows={east:.25cm, west:0.25cm}]
 %% Draw TM tape
 \begin{scope}[start chain=1 going below, start chain=2 going below ,node distance=-0.15mm, every node/.style=draw]
     \node [on chain=1,tmtape,draw=none] {};
-    \node [on chain=1,tmtape] {b};
-    \node [on chain=1,tmtape] {b};
+    \node [on chain=1,tmtape] {1};
+    \node [on chain=1,tmtape] {0};
     \node [on chain=1,tmtape] (begin) {$\#$};
     
-    \node [tmhead,right=1.15cm] at (begin.west) (head) {$(q_i,c)$};
+    \node [tmhead,right=1.15cm] at (begin.west) (head) {$(q_i,1)$};
     
-    \node [on chain=2,right=3cm,tmtape] {a};
-    \node [on chain=2,tmtape] {a};
-    \node [on chain=2,tmtape] {a};
+    \node [on chain=2,right=3cm,tmtape] {1};
+    \node [on chain=2,tmtape] {0};
+    \node [on chain=2,tmtape] {0};
     \node [on chain=2,tmtape] (begin) {$\#$};
 \end{scope}
 
@@ -531,11 +567,14 @@ arrows={east:.25cm, west:0.25cm}]
 \end{tikzpicture}
 \\\
 Operacje MT implementuje się w prosty sposób. \\
-b) zamienimy stos na licznik: pierwszym krokiem jest zapisanie w alfabecie binarnym alfabetu sotowego (każdy symbol jest 
-ciągiem 0 i 1 ustalonej długości). W ten sposób możemy patrzeć na stos 0 i 1 jako na liczbę w systemie binarnym (najbardziej
-znaczące cyfry na dole stosu). Operacje stosowe (zdejmowanie i dodawanie symboli) implementujemy jako odpowiednio 
-dzielenie całkowite oraz mnożenie + dodawanie. Do tego wykorzystujemy pozostałe dwa liczniki. \\
-c) 
+b) zamienimy stos na licznik: patrzeć na stos jako na liczbę w systemie binarnym (najbardziej
+znaczące cyfry na dole stosu). Dodatkowo, aby uniknąć kłopotu z zerami wiodącymi, traktujemy symbol dna stosu $\#$ jako 1.\\
+Operacje stosowe (zdejmowanie i dodawanie symboli) implementujemy jako odpowiednio 
+dzielenie całkowite oraz mnożenie przez 2 + ewentualne dodanie 1 . Do tego wykorzystujemy pozostałe dwa liczniki. \\
+c) konfiguracja 4 liczników jest ciągiem 4 liczb naturalnych $(a,b,c,d)$. W związku z tym w prosty sposób można ją zakodować
+jako jedną liczbę równą $2^a3^b5^c7^d$. Drugi licznik jest potrzebny do implementacji wymaganych operacji na 4 licznikach:
+dodawania i odejmowania ze starego licznika $\longrightarrow$ mnożenia i dzielenia nowego licznika przez odpowiednią liczbę. 
+Ponadto łatwo sprawdzać, czy któryś ze starych liczników jest pusty - wystarczy sprawdzić podzielność przez odpowiednią liczbę. \\ 
 
 
 \begin{zadanie}{114}
@@ -561,7 +600,9 @@ Z praw de Morgana rachunku zbiorów wynika, że
 czyli $L_G \cap L_H = \emptyset  \Longleftrightarrow (L_G^c \cup L_H^c) = A^* \Longleftrightarrow $ zadana instancja PCP 
 nie ma rozwiązania. \\
 Teraz wystarczy pokazać, jak program ma wygenerować gramatykę dla $L_G^c \cup L_H^c$, co będzie redukcją z dopełnienia PCP,
-które jest oczywiście nierozstrzygalne. Szczegóły pozostawiamy jako ćwiczenie.
+które jest oczywiście nierozstrzygalne. Być może najłatwiej zbudować deterministyczny automat ze stosem, rozpoznający $L_G$,
+i powiedzieć, że ponieważ jest deterministyczny, to można wywrócić stany akceptujące na lewą stronę i dostaniemy automat rozpoznający
+dopełnienie. A z niego można wyprodukować gramatykę (ponoć wykład).
 
 \begin{zadanie}{116}
 \end{zadanie}
@@ -569,5 +610,20 @@ Nie. Redukcja z zadania 115: \\
 Weż gramatykę $G$ z problemu $L_G =? A^*$. Wyprodukuj gramatykę $G_{all}$, taką że $L_{G_{all}} = A^*$. Zwróć parę gramatyk
 $G$ i $G_{all}$. \\
 Oczywiście zachodzi $L_G = A^* \Longleftrightarrow L_G = L_{G_{all}}$, co kończy dowód poprawności.
+
+\begin{zadanie}{118}
+\end{zadanie}
+Redukcja z semiThuego: \\
+Dostajemy zbiór produkcji P oraz słowa v i w. Idea: zapętlić słowo (skleić początek z końcem), dodając przy tym specjalny
+znak początku słowa ($\#$). Formalnie:
+\begin{enumerate}
+ \item $\Sigma' = \Sigma \cup \{ \# \}$
+ \item $v' = \# v$
+ \item $w' = \# w$
+ \item $P' = P \cup \{ \langle a , a \rangle : a \in \Sigma' \}$
+\end{enumerate}
+Implikacja w prawo jest, jak zwykle, dość oczywista. Do implikacji w lewo trzeba uzasadnić przekonywująco, że jeżeli 
+$v' \longrightarrow_{P'}^* w'$, to można naśladować potrzebne produkcje i z $v$ otrzymać $w$ w zwykłym semiThu. 
+
 
 \end{document}

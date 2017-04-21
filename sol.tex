@@ -44,7 +44,6 @@
 
 \section{Robocze}
 
-
 \section{Wskazówki}
 
 Patrząc perspektywicznie w stronę zbliżających się egzaminów, ta sekcja wydaje mi się ważniejsza i zachęcam do spędzania z nią
@@ -117,6 +116,12 @@ Wskazówka do implikacji $2 \Rightarrow 1$ podana w treści jest bardzo dobra. W
 do zadania 97. Trzeba powtórzyć tamto rozumowania, z tym że zamiast 2 zbiorów wziąć przeliczalnie wiele.
 \end{zadanie}
 
+\begin{zadanie}{107}
+Wskazówka sugeruje, że nie. Dodatkowa byłaby taka, że zbiorów r.e. jest przeliczalnie wiele - bo tyle jest programów, które je
+rozpoznają. Warto też przypomnieć sobie (jak ktoś nie pamięta), dowód tego, że podzbiorów $\mathbb{N}$ jest nieprzeliczalnie
+wiele. Ten argument jest tylko trochę "inteligentniejszy".
+\end{zadanie}
+
 \begin{zadanie}{110}
 To jest wgl. ważne zadanie i warto mu poświęcić dłuższą chwilę. \\
 a) Chcemy zakodować Maszynę Turinga (z ustalonym wejściem) jako automat deterministyczny z dwoma stosami. \\
@@ -151,6 +156,24 @@ Warto skorzystać z zadania 115.
 \begin{zadanie}{118}
 Czy da się, być może dodając specyficzne zamiany, zasymulować pełny semiproces Thuego, ograniczajc się w \textbf{istotnych} 
 zamianych tylko do zamiany początku pierwszego słowa na koniec drugiego?
+\end{zadanie}
+
+\begin{zadanie}{120}
+ Warto rozważyć jakiś nierozstrzygalny problem, który można zakodować w kafelkach o skończonej liczbie kolorów, a poprawność
+ kodowania sprawdzać bardzo lokalnie (to będzie odpowiadało poprawnym czwórkom kolorów). Trochę podobne do rozwiązania 
+ z Sipsera zadania 115.
+\end{zadanie}
+
+\begin{zadanie}{121}
+ W obu przypadkach redukcja musi zmodyfikować układ równań tak, żeby:\\
+ a) zwiększyć liczbę możliwych rozwiązań. Wsk: zapisać dowolną zmienną całkowitą jako wielomian o wsp. całkowitych oraz 
+ zmiennych naturalnych. \\
+ b) zmniejszyć liczbę rozwiązań. Wsk: tutaj warto skorzystać z wskazówki z treści zadania o zapisie liczby naturalnej 
+ jako 4 kwadratów liczb całkowitych.
+\end{zadanie}
+
+\begin{zadanie}{122}
+ Podobne do zadania 129.
 \end{zadanie}
 
 \section{Szkice rozwiązań}
@@ -431,7 +454,7 @@ i=1,2,...,k \text{ oraz nie kończy się dla $i > k$} \}$. Ten zbiór jest dobry
 
 \begin{zadanie}{103}
 \end{zadanie}
-a) Tak. Bo istanieje takie duże $N$, że na zbiorze $\{ N, N+1, ... \}$ $f$ jest niemalejąca. Z zadania $86$ wynika więc, 
+a) Tak. Bo istnieje takie duże $N$, że na zbiorze $\{ N, N+1, ... \}$ $f$ jest niemalejąca. Z zadania $86$ wynika więc, 
 że $f(\{ N, N+1, ... \})$ jest rekurencyjny. Zatem $f(\mathbb{N}) = f(\{ 1,2, ... ,N-1 \}) \cup f(\{ N, N+1, ... \})$ jest
 rekurencyjny, jako suma dwóch zbiorów rekurencyjnych. \\
 
@@ -451,7 +474,7 @@ obliczalną bijekcją. Definiujemy zbiór $B$ następująco: \\
 Ten zbiór jest dobry, a o tym, że $A_i \leqslant_{rek} B$, świadczy redukcja $\varphi(i,\cdot)$. \\
 $2 \Rightarrow 1$: \\
 Odpowiedź na pytanie ze wskazówki: 1. Jest to zbiór $f^{-1}(B)$. Z tego wynika, przy uwzględnieniu faktu, że redukcji 
-(jako programów), jest tylko przeliczalnie wiele, że dla ustalonego zbioru $B$ istanieje tylko przeliczalnie wiele zbiorów
+(jako programów), jest tylko przeliczalnie wiele, że dla ustalonego zbioru $B$ istnieje tylko przeliczalnie wiele zbiorów
 $A_i$ takich, że $A_i \leqslant_{rek} B$. Zatem, z tego, że $\mathbb{D} \subseteq \{ A_i : i \in \mathbb{N} \}$ wynika, że
 zbiór $\mathbb{D}$ musi być przeliczalny.
 
@@ -466,6 +489,24 @@ Jako $f(n)$ przyjmijmy numer następującego programu: \\
 Dowód poprawności pozostawiamy jako ćwiczenie. \\
 
 b) Nie, bo $Tot$ nie jest r.e. (zadanie $89$), a $N_{emp}$ jest.\\
+
+
+\begin{zadanie}{107}
+\end{zadanie}
+Niech zbiory $A_i$ będą wszystkimi nieskończonymi zbiorami r.e. \\
+Definiujemy indukcyjnie zbiory $B$ i $C$ w następujący sposób: \\
+\begin{enumerate}
+ \item $B_0 = C_0 = \emptyset$
+ \item Niech $b_i,c_i \in A_i \setminus C_{i-1},\ b_i \neq c_i$. Dla każdego $j$ zbiór $C_j$ jest skończony, więc zawsze znajdziemy
+ takie elementy
+ \item $B_i = B_{i-1} \cup \{ b_i \}$
+ \item $C_i = C_{i-1} \cup \{ b_i, c_i \}$
+ \item $B = \bigcup_i B_i$
+ \item $C = \bigcup_i C_i$
+\end{enumerate}
+Oczywiście zbiór $B$ jest nieskończony, bo na każdym kroku dodajemy do niego jeden element. Z drugiej strony, dla każdego $A_i$
+istnieje jego element $c_i$, taki że $c_i \notin B$. W związku z tym, dla każdego $i$ zachodzi $A \nsubseteq B$. 
+Zatem B jest nieskończonym zbiorem bez nieskończonego podzbioru r.e.
 
 
 \begin{zadanie}{110}
