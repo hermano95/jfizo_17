@@ -44,41 +44,35 @@
 
 \section{Robocze}
 
-\begin{zadanie}{107}
-Wskazówka sugeruje, że nie. Dodatkowa byłaby taka, że zbiorów r.e. jest przeliczalnie wiele - bo tyle jest programów, które je
-rozpoznają. Warto też przypomnieć sobie (jak ktoś nie pamięta), dowód tego, że podzbiorów $\mathbb{N}$ jest nieprzeliczalnie
-wiele. Ten argument jest tylko trochę "inteligentniejszy".
-\end{zadanie}
-Niech zbiory $A_i$ będą wszystkimi nieskończonymi zbiorami r.e. \\
-Definiujemy indukcyjnie zbiory $B$ i $C$ w następujący sposób: \\
-\begin{enumerate}
- \item $B_0 = C_0 = \emptyset$
- \item Niech $b_i,c_i \in A_i \setminus C_{i-1},\ b_i \neq c_i$. Dla każdego $j$ zbiór $C_j$ jest skończony, więc zawsze znajdziemy
- takie elementy
- \item $B_i = B_{i-1} \cup \{ b_i \}$
- \item $C_i = C_{i-1} \cup \{ b_i, c_i \}$
- \item $B = \bigcup_i B_i$
- \item $C = \bigcup_i C_i$
-\end{enumerate}
-Oczywiście zbiór $B$ jest nieskończony, bo na każdym kroku dodajemy do niego jeden element. Z drugiej strony, dla każdego $A_i$
-istnieje jego element $c_i$, taki że $c_i \notin B$. W związku z tym, dla każdego $i$ zachodzi $A \nsubseteq B$. 
-Zatem B jest nieskończonym zbiorem bez nieskończonego podzbioru r.e.
+\subsection{Złożoność obliczeniowa.}
 
-
-\begin{zadanie}{120}
- Warto rozważyć jakiś nierozstrzygalny problem, który można zakodować w kafelkach o skończonej liczbie kolorów, a poprawność
- kodowania sprawdzać bardzo lokalnie (to będzie odpowiadało poprawnym czwórkom kolorów). Trochę podobne do rozwiązania 
- z Sipsera zadania 115.
+\begin{zadanie}{143}
+Oczywiście trzeba zamienić pojedynczą 5cio literałową klauzulę na równoważną koniunkcję klauzul 3-literałowych 
+(być może używając dodatkowych zmiennych).
 \end{zadanie}
 
-\begin{zadanie}{121}
- a) 
- b) tutaj warto skorzystać z wskazówki z treści zadania o zapisie liczby naturalnej jako 4 kwadratów liczb całkowitych.
+
+\begin{zadanie}{143}
+\end{zadanie}
+Każdą klauzulę o 5ciu literałach ($l_1\vee l_2\vee l_3\vee l_4\vee l_5$) zamieniamy na następującą koniunkcję klauzul 3-literałowych: \\
+$$
+( l_1 \vee l_2 \vee y_1) \wedge ( l_3 \vee \neg y_1 \vee \neg y_2) \wedge ( l_4 \vee l_5 \vee y2)
+$$
+Dla każdej klauzuli tworzymy nowe zmienne $y$. Oczywiście wartościowania spełniające powstałe formuły istnieją (lub nie) równocześnie.
+
+\begin{zadanie}{144}
+Wskazówka z treści zadania: \textbf{To nie jest trudne. Idea jest podobna jak przy dowodzie faktu, że 3SAT¬ p 3COL, który był na wykładzie. Tylko łatwiej} jest dobra. Dodatkowo, warto zauważyć, że to my ustalamy liczbę agentów. Jaka byłaby 
+naturalna? Kim w formule CNF ma być agent i czym jest to, czego strzeże?
 \end{zadanie}
 
-\begin{zadanie}{122}
- Podobne do zadania 129.
+\begin{zadanie}{145}
+Wskazówka z treści zadania jest dobra. Oczywiście prościej jest zamienić graf nieskierowany na równoważny graf skierowany.
 \end{zadanie}
+
+\begin{zadanie}{148}
+Za każde wystąpienie zmiennej $x$ postawić nową zmienną $x_i$
+\end{zadanie}
+
 
 \section{Wskazówki}
 
@@ -152,6 +146,12 @@ Wskazówka do implikacji $2 \Rightarrow 1$ podana w treści jest bardzo dobra. W
 do zadania 97. Trzeba powtórzyć tamto rozumowania, z tym że zamiast 2 zbiorów wziąć przeliczalnie wiele.
 \end{zadanie}
 
+\begin{zadanie}{107}
+Wskazówka sugeruje, że nie. Dodatkowa byłaby taka, że zbiorów r.e. jest przeliczalnie wiele - bo tyle jest programów, które je
+rozpoznają. Warto też przypomnieć sobie (jak ktoś nie pamięta), dowód tego, że podzbiorów $\mathbb{N}$ jest nieprzeliczalnie
+wiele. Ten argument jest tylko trochę "inteligentniejszy".
+\end{zadanie}
+
 \begin{zadanie}{110}
 To jest wgl. ważne zadanie i warto mu poświęcić dłuższą chwilę. \\
 a) Chcemy zakodować Maszynę Turinga (z ustalonym wejściem) jako automat deterministyczny z dwoma stosami. \\
@@ -186,6 +186,24 @@ Warto skorzystać z zadania 115.
 \begin{zadanie}{118}
 Czy da się, być może dodając specyficzne zamiany, zasymulować pełny semiproces Thuego, ograniczajc się w \textbf{istotnych} 
 zamianych tylko do zamiany początku pierwszego słowa na koniec drugiego?
+\end{zadanie}
+
+\begin{zadanie}{120}
+ Warto rozważyć jakiś nierozstrzygalny problem, który można zakodować w kafelkach o skończonej liczbie kolorów, a poprawność
+ kodowania sprawdzać bardzo lokalnie (to będzie odpowiadało poprawnym czwórkom kolorów). Trochę podobne do rozwiązania 
+ z Sipsera zadania 115.
+\end{zadanie}
+
+\begin{zadanie}{121}
+ W obu przypadkach redukcja musi zmodyfikować układ równań tak, żeby:\\
+ a) zwiększyć liczbę możliwych rozwiązań. Wsk: zapisać dowolną zmienną całkowitą jako wielomian o wsp. całkowitych oraz 
+ zmiennych naturalnych. \\
+ b) zmniejszyć liczbę rozwiązań. Wsk: tutaj warto skorzystać z wskazówki z treści zadania o zapisie liczby naturalnej 
+ jako 4 kwadratów liczb całkowitych.
+\end{zadanie}
+
+\begin{zadanie}{122}
+ Podobne do zadania 129.
 \end{zadanie}
 
 \section{Szkice rozwiązań}
@@ -501,6 +519,24 @@ Jako $f(n)$ przyjmijmy numer następującego programu: \\
 Dowód poprawności pozostawiamy jako ćwiczenie. \\
 
 b) Nie, bo $Tot$ nie jest r.e. (zadanie $89$), a $N_{emp}$ jest.\\
+
+
+\begin{zadanie}{107}
+\end{zadanie}
+Niech zbiory $A_i$ będą wszystkimi nieskończonymi zbiorami r.e. \\
+Definiujemy indukcyjnie zbiory $B$ i $C$ w następujący sposób: \\
+\begin{enumerate}
+ \item $B_0 = C_0 = \emptyset$
+ \item Niech $b_i,c_i \in A_i \setminus C_{i-1},\ b_i \neq c_i$. Dla każdego $j$ zbiór $C_j$ jest skończony, więc zawsze znajdziemy
+ takie elementy
+ \item $B_i = B_{i-1} \cup \{ b_i \}$
+ \item $C_i = C_{i-1} \cup \{ b_i, c_i \}$
+ \item $B = \bigcup_i B_i$
+ \item $C = \bigcup_i C_i$
+\end{enumerate}
+Oczywiście zbiór $B$ jest nieskończony, bo na każdym kroku dodajemy do niego jeden element. Z drugiej strony, dla każdego $A_i$
+istnieje jego element $c_i$, taki że $c_i \notin B$. W związku z tym, dla każdego $i$ zachodzi $A \nsubseteq B$. 
+Zatem B jest nieskończonym zbiorem bez nieskończonego podzbioru r.e.
 
 
 \begin{zadanie}{110}
