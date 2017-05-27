@@ -42,6 +42,7 @@
 
 \maketitle
 
+\section{Robocze}
 
 \section{Wskazówki}
 
@@ -175,6 +176,7 @@ zamianych tylko do zamiany początku pierwszego słowa na koniec drugiego?
  Podobne do zadania 129.
 \end{zadanie}
 
+
 \subsection{Złożoność obliczeniowa.}
 
 \begin{zadanie}{143}
@@ -183,7 +185,7 @@ Oczywiście trzeba zamienić pojedynczą 5cio literałową klauzulę na równowa
 \end{zadanie}
 
 \begin{zadanie}{144}
-Wskazówka z treści zadania: \textbf{To nie jest trudne. Idea jest podobna jak przy dowodzie faktu, że 3SAT¬ p 3COL, który był na wykładzie. Tylko łatwiej} jest dobra. Dodatkowo, warto zauważyć, że to my ustalamy liczbę agentów. Jaka byłaby 
+Wskazówka z treści zadania: \textbf{To nie jest trudne. Idea jest podobna jak przy dowodzie faktu, że 3SAT $\leqslant_p$ 3COL, który był na wykładzie. Tylko łatwiej} jest dobra. Dodatkowo, warto zauważyć, że to my ustalamy liczbę agentów. Jaka byłaby 
 naturalna? Kim w formule CNF ma być agent i czym jest to, czego strzeże?
 \end{zadanie}
 
@@ -194,6 +196,86 @@ Wskazówka z treści zadania jest dobra. Oczywiście prościej jest zamienić gr
 \begin{zadanie}{148}
 Za każde wystąpienie zmiennej $x$ postawić nową zmienną $x_i$. Wykorzystać pozostałe 2 dozwolone wystąpienia zmiennych $x_i$
 na napisanie, że $x_1 \Leftrightarrow x_2 \Leftrightarrow ... \Leftrightarrow x_k$ (w postaci CNF).
+\end{zadanie}
+
+
+\begin{zadanie}{150}
+ Oczywiście redukcja z Hamiltona. Wagi w grafie pełnym powinny wiązać się z tym, które krawędzie są w oryginalnym graife, a
+ których nie ma.
+\end{zadanie}
+
+\begin{zadanie}{151}
+ Jak w zadaniu 150, ale chcemy, żeby krawędzie niebędące w oryginalnym grafie byłby bardzo ciężkie. Dlaczego?
+\end{zadanie}
+
+\begin{zadanie}{152}
+ To zadanie ma związek z MST.
+\end{zadanie}
+
+\begin{zadanie}{176}
+ Kluczowe jest to, że pytanie o $\sigma(G)=1$ to przecież pytanie o istnienie cyklu Hamiltona.
+\end{zadanie}
+
+\begin{zadanie}{177}
+ Wynika z zadania 178.
+\end{zadanie}
+
+\begin{zadanie}{178}
+ Powinno się udać połączyć $c(+1?)$ kopii grafu $G$ w ten sposób, żeby był w tym cykl Hamiltona wtedy i tylko wtedy, 
+ gdy w G jest, a ponadto, żeby $\sigma(G') > c$ gdy w $G$ nie ma cyklu Hamiltona.
+\end{zadanie}
+
+\begin{zadanie}{192}
+ Ten zbiór jest oczywiście świadkiem. Najtrudniej pokazać, że nie jest w P - pokaż, jak obliczyć $f^{-1}(x)$ w czasie wielomianowym,
+ gdyby jednak był.
+\end{zadanie}
+
+\begin{zadanie}{193}
+ Znajdź zbiór punktów, z których w jednym ruchu może wygrać gracz $P$. Czy to jest żmudne?
+\end{zadanie}
+
+\begin{zadanie}{194}
+ Najpierw przypomnij, jak z wyrażenia regularnego buduje się NDFA. Może zamiast sprawdzania totalności tego automatu, łatwiej
+ sprawdzić jego nietotalność (dokładniej, pokaż że jest ona w NPSPACE).
+\end{zadanie}
+
+\begin{zadanie}{195}
+ Trzeba opisać, jak przechodzić wykładnicze drzewo wartościowań mając do dyspozycji pamięć wielomianową. Plemienne liczenie
+ liczby rozwiązań powinno zadziałać (plemię liczy 0/1/2lubwięcej). \\
+ Dla wersji $\{0,1\}$ - czy nie można zamienić formuł arytmetyki modulo 2 na spójniki logiczne? Ponadto, czy łatwo się sprawdza,
+ że rozwiązanie jest jedyne?
+\end{zadanie}
+
+\begin{zadanie}{196}
+ Po pierwsze: czy to jest problem SAT z trzema kwantyfikatorami uniwersalnymi, dla wszystkich możliwości rozłożenia tych
+ kwantyfikatorów (i dlaczego nie)? A skoro nie, to jak zapisać \textbf{zdaniem} problem Patroklesa, jaka jest długość tego
+ zdania i ile występuje w nim kwantyfikatorów uniwersalnych? \\
+ Po drugie: co to znaczy na nasze, że Mojra może wybierać wszystko, co chce, a formuła i tak będzie prawdziwa (jest mądre słowo
+ na takie formuły).
+\end{zadanie}
+
+\begin{zadanie}{197}
+ Spełnienie taiej formuły jest dla Patroklesa co najmniej tak trudne, jak spełnienie odpowiedniego QBF-a - stąd naturalna 
+ hipoteza.
+\end{zadanie}
+
+\begin{zadanie}{212}
+ Zasymuluj podany na wykładzie dowód PSPACE-zupełności Gry w geografię. Określ S w naturalny sposób. Wystarczy jeden wierzchołek
+ w zbiorze T.
+\end{zadanie}
+
+\begin{zadanie}{213}
+ Coś jak rozwiązywanie QBF-ów z ograniczoną liczbą wantyfikatorów uniwersalnych (patrząc z punktu widzenia Złego Przewodnika).
+ Czy Złemu nie wystarczy rozwiązać zadania dla wszystkich możliwości naszych ruchów (których jest wielomianowo ($n^7$) wiele)?
+\end{zadanie}
+
+\begin{zadanie}{214}
+ Wystarczy pokazać dla $|S| = 0, |T| = 1$, czyli $k=1$. Podobne do zadanie 214'.
+\end{zadanie}
+
+\begin{zadanie}{214'}
+ Pokaż, że problem Gry w Wesołe Zwiedzanie (S = T = V) nie jest w PTIME (zakładamy, że NP $\neq$ PTIME). Zwiedzanie jest Wesołe,
+ bo Zły Przewodnik nie może nam zaszkodzić.
 \end{zadanie}
 
 
@@ -652,6 +734,16 @@ znak początku słowa ($\#$). Formalnie:
 \end{enumerate}
 Implikacja w prawo jest, jak zwykle, dość oczywista. Do implikacji w lewo trzeba uzasadnić przekonywująco, że jeżeli 
 $v' \longrightarrow_{P'}^* w'$, to można naśladować potrzebne produkcje i z $v$ otrzymać $w$ w zwykłym semiThu. 
+
+
+\begin{zadanie}{143}
+\end{zadanie}
+Każdą klauzulę o 5ciu literałach ($l_1\vee l_2\vee l_3\vee l_4\vee l_5$) zamieniamy na następującą koniunkcję klauzul 3-literałowych: \\
+$$
+( l_1 \vee l_2 \vee y_1) \wedge ( l_3 \vee \neg y_1 \vee \neg y_2) \wedge ( l_4 \vee l_5 \vee y2)
+$$
+Dla każdej klauzuli tworzymy nowe zmienne $y$. Oczywiście wartościowania spełniające powstałe formuły istnieją (lub nie) równocześnie.
+
 
 
 \end{document}

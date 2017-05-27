@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.5)  28 APR 2017 18:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.5)  28 MAY 2017 00:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1051,118 +1051,118 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 43.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (2.87306pt too wide) in paragraph at lines 54--56
+Overfull \hbox (2.87306pt too wide) in paragraph at lines 55--57
 []\OT4/cmr/bx/n/10.95 Zadanie 63. []\OT4/cmr/m/it/10.95 Warto za-sta-no-wi¢ si¦
 , jak miaªby wy-gl¡-da¢ nie-de-ter-mi-ni-styczny
  []
 
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10.95> on input line 61.
+(Font)              <10.95> on input line 62.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-
-! Package inputenc Error: Unicode char Â¬ (U+AC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.186 ...tÃ³ry byÅ‚ na wykÅ‚adzie. Tylko Å‚atwiej}
-                                                   jest dobra. Dodatkowo, wa...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
-<zad40.png, id=27, 707.64375pt x 398.48875pt>
+<zad40.png, id=31, 707.64375pt x 398.48875pt>
 File: zad40.png Graphic file (type png)
  <use zad40.png>
-Package pdftex.def Info: zad40.png used on input line 216.
+Package pdftex.def Info: zad40.png used on input line 298.
 (pdftex.def)             Requested size: 170.71652pt x 96.13176pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--234
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--234
+Underfull \hbox (badness 10000) in paragraph at lines 312--316
 
  []
 
-[4 <./zad40.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 235--240
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--240
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 317--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--240
+Underfull \hbox (badness 10000) in paragraph at lines 317--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 317--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--247
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--247
+Underfull \hbox (badness 10000) in paragraph at lines 327--329
 
  []
 
-<zad42.png, id=33, 1109.14375pt x 399.4925pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--329
+
+ []
+
+<zad42.png, id=36, 1109.14375pt x 399.4925pt>
 File: zad42.png Graphic file (type png)
  <use zad42.png>
-Package pdftex.def Info: zad42.png used on input line 251.
+Package pdftex.def Info: zad42.png used on input line 333.
 (pdftex.def)             Requested size: 512.1496pt x 184.46368pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--257
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--339
 
  []
 
-<zad42_2.png, id=34, 1109.14375pt x 399.4925pt>
+<zad42_2.png, id=37, 1109.14375pt x 399.4925pt>
 File: zad42_2.png Graphic file (type png)
  <use zad42_2.png>
-Package pdftex.def Info: zad42_2.png used on input line 261.
+Package pdftex.def Info: zad42_2.png used on input line 343.
 (pdftex.def)             Requested size: 512.1496pt x 184.46368pt.
- [5 <./zad42.png>] <zad42_3.png, id=38, 1109.14375pt x 399.4925pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<zad42_3.png, id=38, 1109.14375pt x 399.4925pt>
 File: zad42_3.png Graphic file (type png)
  <use zad42_3.png>
-Package pdftex.def Info: zad42_3.png used on input line 272.
+Package pdftex.def Info: zad42_3.png used on input line 354.
 (pdftex.def)             Requested size: 512.1496pt x 184.46368pt.
- [6 <./zad42_2.png> <./zad42_3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 279--281
+ [6 <./zad40.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--363
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--281
+Underfull \hbox (badness 10000) in paragraph at lines 361--363
 
  []
 
-[7]
-Overfull \hbox (0.46745pt too wide) in paragraph at lines 323--325
+[7 <./zad42.png> <./zad42_2.png>] [8 <./zad42_3.png>]
+Overfull \hbox (0.46745pt too wide) in paragraph at lines 405--407
 \OT4/cmr/m/n/10.95 Podpunkt 2: de-fi-niu-jemy (dla trans-du-cera Me-aly'ego $\O
 MS/plsy/m/n/10.95 h\OT4/cmr/m/n/10.95 ^^F\OML/plm/m/it/10.95 ; \OT4/cmr/m/n/10.
 95 ^^F[]\OML/plm/m/it/10.95 ; Q; q[]; ^^N; ^^[[]\OMS/plsy/m/n/10.95 i$\OT4/cmr/
@@ -1170,17 +1170,17 @@ m/n/10.95 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--338
+Underfull \hbox (badness 10000) in paragraph at lines 417--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--338
+Underfull \hbox (badness 10000) in paragraph at lines 417--420
 
  []
 
 
-Overfull \hbox (4.97299pt too wide) in paragraph at lines 341--346
+Overfull \hbox (4.97299pt too wide) in paragraph at lines 423--428
 \OT4/cmr/m/n/10.95 Wtedy $\OMS/plsy/m/n/10.95 h\OT4/cmr/m/n/10.95 ^^F\OML/plm/m
 /it/10.95 ; Q[]; q[]; F[]; ^^N[]\OMS/plsy/m/n/10.95 i$ \OT4/cmr/m/n/10.95 jest 
 DFA roz-po-zna-j¡-cym $\OML/plm/m/it/10.95 A$ \OT4/cmr/m/n/10.95 (d-d. in-duk-c
@@ -1188,17 +1188,17 @@ yjny wzgl¦-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--346
+Underfull \hbox (badness 10000) in paragraph at lines 423--428
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--346
+Underfull \hbox (badness 10000) in paragraph at lines 423--428
 
  []
 
-[8]
-Overfull \hbox (15.08632pt too wide) in paragraph at lines 371--378
+[9]
+Overfull \hbox (15.08632pt too wide) in paragraph at lines 453--460
 []\OT4/cmr/m/n/10.95 Gdyby byªo $\OMS/plsy/m/n/10.95 j\OML/plm/m/it/10.95 Q[]\O
 MS/plsy/m/n/10.95 j \OML/plm/m/it/10.95 < n[]$\OT4/cmr/m/n/10.95 , to $\OML/plm
 /m/it/10.95 Im\OT4/cmr/m/n/10.95 (\OML/plm/m/it/10.95 ^^[[]\OT4/cmr/m/n/10.95 )
@@ -1209,7 +1209,7 @@ m/n/10.95 ) \OMS/plsy/m/n/10.95 n
  []
 
 
-Overfull \hbox (11.57828pt too wide) in paragraph at lines 371--378
+Overfull \hbox (11.57828pt too wide) in paragraph at lines 453--460
 \OT4/cmr/m/n/10.95 tym, »e $\OML/plm/m/it/10.95 ^^[[]\OT4/cmr/m/n/10.95 (\OML/p
 lm/m/it/10.95 ^^N[]\OT4/cmr/m/n/10.95 (\OML/plm/m/it/10.95 q[]; k\OT4/cmr/m/n/1
 0.95 )) = \OML/plm/m/it/10.95 ^^[[]\OT4/cmr/m/n/10.95 (1\OML/plm/m/it/10.95 ; k
@@ -1218,12 +1218,12 @@ L/plm/m/it/10.95 q[]; kl\OT4/cmr/m/n/10.95 )) = \OML/plm/m/it/10.95 ^^[[]\OT4/c
 mr/m/n/10.95 (\OML/plm/m/it/10.95 k; l\OT4/cmr/m/n/10.95 ) =
  []
 
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 401
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 483
 .
 (/usr/share/texlive/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
-) [9]
-Overfull \hbox (10.27168pt too wide) in paragraph at lines 408--413
+) [10]
+Overfull \hbox (10.27168pt too wide) in paragraph at lines 490--495
 \OT4/cmr/m/n/10.95 Oczy-wi-±cie $\OML/plm/m/it/10.95 Dom\OT4/cmr/m/n/10.95 (^^H
 []) = (2\U/msb/m/n/10.95 N \OT4/cmr/m/n/10.95 + \OMS/plsy/m/n/10.95 f\OT4/cmr/m
 /n/10.95 1\OMS/plsy/m/n/10.95 g\OT4/cmr/m/n/10.95 ) \OMS/plsy/m/n/10.95 \ f\OML
@@ -1233,114 +1233,119 @@ mr/m/n/10.95 )\OMS/plsy/m/n/10.95 g$\OT4/cmr/m/n/10.95 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 416--420
+Underfull \hbox (badness 10000) in paragraph at lines 498--502
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 422--429
+Underfull \hbox (badness 10000) in paragraph at lines 504--511
 
  []
 
-[10]
-Overfull \hbox (21.8526pt too wide) in paragraph at lines 447--447
+[11]
+Overfull \hbox (21.8526pt too wide) in paragraph at lines 529--529
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 471--472
+Underfull \hbox (badness 10000) in paragraph at lines 553--554
 
  []
 
-
-Overfull \hbox (25.12872pt too wide) in paragraph at lines 473--475
+[12]
+Overfull \hbox (25.12872pt too wide) in paragraph at lines 555--557
 []\OT4/cmr/m/n/10.95 b) De-fi-niu-jemy $\OML/plm/m/it/10.95 A \OT4/cmr/m/n/10.9
 5 = \OMS/plsy/m/n/10.95 f\OT4/cmr/m/n/10.95 (\OML/plm/m/it/10.95 n; k; t\OT4/cm
 r/m/n/10.95 ) : ^^H[](\OML/plm/m/it/10.95 i\OT4/cmr/m/n/10.95 )[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 479--482
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 490--493
+Underfull \hbox (badness 10000) in paragraph at lines 561--564
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--507
+Underfull \hbox (badness 10000) in paragraph at lines 572--575
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 508--512
+Underfull \hbox (badness 10000) in paragraph at lines 587--589
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 513--514
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 518--520
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 536--540
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 569--570
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 595--606
+Underfull \hbox (badness 10000) in paragraph at lines 590--594
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 610--612
+Underfull \hbox (badness 10000) in paragraph at lines 595--596
 
  []
 
-[14] [15] (./sol.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 600--602
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 618--622
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 651--652
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 677--688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 692--694
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 741--742
+
+ []
+
+[16] (./sol.aux) ) 
 Here is how much of TeX's memory you used:
- 17283 strings out of 494918
- 346845 string characters out of 6180102
- 421062 words of memory out of 5000000
- 20197 multiletter control sequences out of 15000+600000
+ 17282 strings out of 494918
+ 346840 string characters out of 6180102
+ 419060 words of memory out of 5000000
+ 20196 multiletter control sequences out of 15000+600000
  16368 words of font info for 50 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
  55i,14n,71p,418b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plms.e
-nc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{/usr/share/texli
-ve/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{/usr/share/texlive/texmf-dist/fonts/
-enc/dvips/pl/plme.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plit.en
-c}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plrm.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-pl/plbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plex10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/pl/plmi6.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/pl/plmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/pl/plr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/pl/plsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/pl/plsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plti10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/pl/pltt10.pfb>
-Output written on sol.pdf (15 pages, 190367 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plms.enc}{/
+usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{/usr/share/texlive/te
+xmf-dist/fonts/enc/dvips/pl/plmi.enc}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/pl/plme.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plit.enc}{/u
+sr/share/texlive/texmf-dist/fonts/enc/dvips/pl/plrm.enc}</usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/pl/plbx10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/pl/plbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/pl
+bxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plex10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/pl/plmi10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/pl/plmi6.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/pl/plmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/p
+l/plr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plr12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/pl/plr8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/pl/plsy10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/pl/plsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl
+/plsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/pl/plti10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/pl/pltt10.pfb>
+Output written on sol.pdf (16 pages, 196546 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 137 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
